@@ -47,6 +47,7 @@ import { Formatter } from "../formatter.js"
 import { Generate } from "../generate.js"
 import { Form } from "../form.js"
 import { FileSystem } from "../filesystem.js"
+import { FileSystemSearch } from "../filesystem/search.js"
 import { LocationWatcherPolicy } from "../filesystem/location-watcher-policy.js"
 import { FSUtil } from "@opencode/util/fs-util"
 import { Global } from "@opencode/util/global"
@@ -140,6 +141,7 @@ const services = [
   Generate.Service,
   LocationWatcherPolicy.Service,
   FileSystem.Service,
+  FileSystemSearch.Service,
   FSUtil.Service,
   Global.Service,
   HttpClient.HttpClient,
@@ -200,6 +202,7 @@ export const requirements = LayerNode.group([
   Generate.node,
   LocationWatcherPolicy.node,
   FileSystem.node,
+  FileSystemSearch.node,
   FSUtil.node,
   Global.node,
   httpClient,
